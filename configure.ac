@@ -1,5 +1,5 @@
 AC_PREREQ([2.69])
-AC_INIT([ifacebind], [0.1], [support@nubolabs.com])
+AC_INIT([ifacebind], [0.0.1], [support@nubolabs.com])
 AM_INIT_AUTOMAKE([-Wall -Werror foreign])
 AC_CONFIG_SRCDIR([config.h.in])
 AC_CONFIG_HEADERS([config.h])
