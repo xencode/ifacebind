@@ -10,11 +10,16 @@ make
 sudo make install
 ```
 
-This is specified via the enviroment variable BIND_IFACE.
+The desired interface is specified via the enviroment variable BIND_IFACE.
 
+The format of the command is:
 
-Example in bash to make inetd only listen to the loopback
-lo interface, thus disabling remote connections and only
-enable to/from localhost:
+```
+BIND_IFACE="interface" LD_PRELOAD=./ifacebind.so <application path>
+```
 
+An example in bash to make the application 'inetd' only listen to the loopback lo interface, thus disabling remote connections and only allow connections to/from localhost:
+
+```
 BIND_IFACE="lo" LD_PRELOAD=./ifacebind.so /sbin/inetd
+```
